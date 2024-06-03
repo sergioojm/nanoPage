@@ -1,0 +1,669 @@
+/* 
+-------------------------------------------------------------------
+Realizado por Sergio Julbez Mendez
+
+#1E1E24 negro
+
+#36F4BB verde
+
+#048A81 2 verde
+
+
+-------------------------------------------------------------------
+*/
+
+
+
+/* --------------- Otros ---------------- */
+:root {
+    --name: slideRight;
+    --cardsBG: rgb(231, 222, 242);
+    --cardsTextColor: #383D3B;
+    
+}
+
+body {
+    transition: 0.3s;
+    background-color: rgb(243, 236, 252);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.changeColor {
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.3);
+  /* backdrop-filter: blur(10px); */
+    z-index: 0;
+}
+
+
+.darkMode {
+    transition: 0.3s;
+    background-color: rgb(44, 44, 48);
+}
+
+
+.rotate {
+    transition: 0.3s;
+    transform: rotate(90deg);
+}
+
+
+/*Barra de scroll custom */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+::-webkit-scrollbar-track {
+    background-color: #1E1E24;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #36F4BB;
+    border-radius: 3px;
+    max-height: 15px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #048A81;
+}
+
+/* ----------------------- navBar ------------------- */
+#navBar {
+    background-color: #1E1E24;
+    color: #d5cadc;
+    box-shadow: rgba(4, 138, 129, 0.12) 2px 3px 4px, rgba(4, 138, 129, 0.24) 2px 3px 4px, rgba(4, 138, 129, 0.32) 2px 3px 4px;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    position: fixed;
+    overflow: hidden;
+    margin-top: -0.7%;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.32em;
+    font-weight: bold;
+    user-select: none;
+    z-index: 6; 
+}
+
+.navBarElement {
+    transition: 0.1s;
+    padding: 1.3%;
+    margin-top: auto;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+        transition: 0.3s;
+        color: #36F4BB;
+    }
+
+   
+}
+
+.navBarElement::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #36F4BB ;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+}
+
+
+.navBarElement:hover::before {
+    width: 100%;
+}
+
+.clickAnimation {
+    transition: 0.2s;
+
+    &:active {
+        transition: 0s;
+        color: #048A81;
+    }
+
+}
+
+/* Dentro del navBar*/
+
+#logo {
+    cursor: auto;
+    width: 100px;
+    height: 100px;
+    padding-left: 10px;
+    padding-top: 5px;
+    overflow: hidden;
+}
+
+#searchArea {
+    display: flex;
+    align-items: center;
+    min-width: 200px;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+    transition: 0.3s;
+
+    &:hover {
+        color: rgba(54, 244, 187, 0.8);
+    }
+}
+
+#searchBox {
+    transition: 0.3s;
+    flex: 1;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 8px;
+    border-bottom: 1px solid rgb(243, 236, 252);
+    caret-color: white;
+    color: white;
+
+    &:focus {
+        border-bottom: 1px solid #36F4BB;
+    }
+}
+
+
+#userMenu {
+    padding: 20px;
+    margin-top: 1vh;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+
+    &:hover {
+        color: #36F4BB;
+    }
+}
+
+
+/*----- paginas webs de los integrantes del grupo-----*/
+
+#arturo {
+    margin-left: auto;
+}
+
+#fer {
+    flex-shrink: 0;
+} 
+
+/*---------------------------- CONTENT ----------------------------*/
+
+.content {
+    margin-top: auto;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#sideBar {
+    transition: 0.5s;
+    display: fleX;
+    right: 0;
+    top: 8.5%;
+    height: 100%;
+    background-color: #333;
+    position: fixed;
+    overflow-x: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    z-index: 5;
+    box-shadow: rgba(4, 138, 129, 0.4) -5px 5px, rgba(4, 138, 129, 0.3) -10px 10px, rgba(4, 138, 129, 0.2) -15px 15px, rgba(4, 138, 129, 0.1) -20px 20px, rgba(4, 138, 129, 0.05) -25px 25px;
+
+}
+
+.sideBarContent {
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: 0.3s;
+    color: white;
+    padding: 20px;
+    min-width: 200px;
+    border-bottom: 3px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+    &:hover {
+        transition: 0.3s;
+        color: #36F4BB;
+        background-color: rgba(255, 255, 255, 0.186);
+        border-radius: 3px;
+        
+    }
+
+    &:active {
+        transition: 0.1s;
+        color: #048A81;
+    }
+}
+
+
+/*-------------------- IMAGE SLIDER -------------------*/
+
+#imageSlider {
+    position: relative;
+    width: 100%;
+    height: 620px;
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 8px, rgba(0, 0, 0, 0.6) 0px 4px 8px, rgba(0, 0, 0, 0.8) 0px 1.5px 3px;
+    overflow: hidden;
+    background-color: #1E1E24;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    order: 2;
+    overflow: hidden;
+    display: block;
+    position: absolute; 
+}
+
+.imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 45%;
+    cursor: pointer;
+    padding: 10px;
+    color: #d5cadc;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 4;
+
+    &:hover {
+        color: #36F4BB;
+    }
+}
+
+.prev {
+    left: 0;
+    order: 1;
+}
+
+.next {
+    right: 0;
+    order: 2;
+    border-radius: 3px 0 0 3px;
+}
+
+.slide.transition {
+    transition: transform 0.3s ease; /* Ajusta el tiempo según sea necesario */
+}
+
+.fraseSlider {
+    display: flex;
+    border-top: 2px solid #cedc00;
+    position: absolute;
+    top: 70%;
+    background-color: #048a813e;
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-style: italic;
+    padding: 20px;
+    overflow: hidden;
+}
+
+#quote {
+    margin-left: auto;
+    margin-right: 40px;
+    font-size: 1.3em;
+}
+
+#texoResto {
+    font-size: 2em;
+}
+
+#currentSlide {
+    display: flex;
+    position: absolute;
+    top: 95%;
+    width: 100%;
+    height: auto;
+    z-index: 3;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.currentSlide-line {
+    margin: 0.5vw;
+    width: 5%;
+    height: 3px;
+    background-color: #cdd8d699;
+    transition: background-color 0.3s;
+}
+
+
+
+
+/* ---- Desechado
+@keyframes slideRight {
+   from {
+    transform: translate(-100%);
+   }
+   to {
+    transform: translate(0px);
+   }
+}
+
+
+@keyframes slideLeft {
+    from {
+     transform: translate(200%);
+    }
+ 
+    to {
+     transform: translate(0px);
+    }
+ }
+*/
+
+/*---------------------------------------*/
+
+#vidd {
+    opacity: 0;
+    transition: opacity 1s;
+    height: 70%;
+    /*box-shadow: rgba(0, 0, 0, 0.22) 0px 1px 3px, rgba(0, 0, 0, 0.44) 0px 1px 2px;*/
+    padding: 20px;
+    padding-bottom: 40px;
+    background-color: #048A81; 
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    
+}
+
+#esGodContainer {
+    border-top: 2px solid #cedc00;
+    display: flex;
+    /* margin-top: 5%; */
+    justify-content: center;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;  
+}
+
+#esGod {
+    color: rgb(231, 222, 242);
+    border-bottom: 2px solid rgb(231, 222, 242);
+    text-align: center;
+}
+
+#vid {
+    align-self: center;
+    border-radius: 12px;
+    width: 100%;
+    height: 450px;
+    overflow: hidden; 
+}
+
+
+#scroll-text {
+    background-color: #1E1E24;
+    margin-top: 5%;
+    border-top: 2px solid #cedc00;
+    text-align: center;
+    padding: 10%;
+    
+}
+
+#scroll-text span {
+    color: rgb(240, 240, 240, 0.2);
+    background-image: linear-gradient(90deg, #36F4BB, #036861);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    animation: scroll-text linear forwards;
+    animation-timeline: view();
+  
+}
+
+#scroll-text h1 span {
+    animation-range-start: cover 20vh;
+    animation-range-end: cover 35vh;
+}
+
+#scroll-text p span {
+    animation-range-start: cover 26vh;
+    animation-range-end: cover 70vh;
+}
+
+#scroll-text p {
+    font-size: 2em;
+}
+
+#scroll-text h1 {
+    font-size: 3em;
+    font-style: italic;
+}
+
+@keyframes scroll-text {
+    to { background-size: 100% 100%; }
+}
+
+/* -----------------------------------*/
+
+#fotos {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.foto-container {
+    width: 20%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: var(--cardsBG);
+    box-shadow: rgba(0, 0, 0, 0.27) 0px 1px 3px, rgba(0, 0, 0, 0.39) 0px 2px 5px;
+    transition: 0.3s;
+    overflow: hidden;
+
+    &:hover {
+        transition: 0.3s;
+        transform: scale(1.1);
+    }
+ 
+}
+
+.imagenes-fotos {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.titulitis {
+    color: #bdb7c1;
+    text-align: left;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-top: 10px;
+    padding: 10px;
+    padding-left: 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.titulo {
+    color: #048A81;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 10px;
+    padding-left: 15px;
+}
+
+.desc {
+    color: var(--cardsTextColor);
+    text-align: left;
+    text-align: justify;
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: -20px;
+    padding: 10px;
+    padding-left: 15px;
+}
+
+
+
+
+/* -------------------- Mini juego ------------------- */
+
+#miniJuego {
+    width: 100%;
+    height: 50%;
+    padding-top: 10vh;
+    border-top: 2px solid #cedc00;
+    transition: 0.3s;
+    background-color: var(--cardsBG);
+    display: flex;
+    flex-direction: column;
+   
+}
+
+ #controles-minijuego {
+    display: flex;
+    width: 50%;
+    align-self: center;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1%;
+}
+
+.game-button {
+    padding: 12px;
+    border-radius: 4px;
+    width: 15%;
+    font-weight: bold;
+    font-size: 1em;
+    background-color: #048A81;
+    color: #3a3a3f;
+    border: solid 2px #cedc00;
+    box-shadow: 2px 5px #036861;
+    transition: 0.1s;
+
+    &:active {
+        transform: translateY(3px);
+        box-shadow: 0px 2px #023b37;
+    }
+}
+
+#stats {
+    padding: 12px;
+    border-radius: 4px;
+    width: 15%;
+    font-weight: bold;
+    font-size: 1em;
+    background-color: #048A81;
+    color: #3a3a3f;
+    border: solid 2px #cedc00;
+    box-shadow: 2px 5px #036861;
+    transition: 0.1s;
+}
+
+
+#core-game {
+    display: flex;
+    justify-content: center;
+}
+
+#coche {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+#left-tyre {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    z-index: 5;
+}
+
+#right-tyre {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    z-index: 5;
+}
+
+.rueda {
+    width: 75px; 
+    height: 75px; 
+    border-radius: 50%; 
+    background-color: #383D3B;
+    border: 3px solid #cedc00; 
+    color: #bdb7c1;
+}
+#abajo-izq {
+    margin-top: 100%;
+    margin-left: 200%;
+}
+
+#abajo-drch {
+    margin-top: 100%;
+    margin-left: -200%;
+}
+
+#arriba-izq {
+    margin-top: 80%;
+    margin-left: 200%;
+}
+
+#arriba-drch {
+    margin-top: 80%;
+    margin-left: -200%;
+}
+
+
+/* ------------------- Footer ------------------------ */
+
+#nanoPageCredits {
+   /* margin-top: 20px;*/
+    border-top: 2px solid #cedc00;
+    background-color: #048A81;
+    display: flex;
+}
+
+.creditsElement {
+    padding: 20px;
+    font-size: 1em;
+    color: rgb(231, 222, 242);
+}
+
+#creadorCredits {
+    margin-left: auto;
+   
+}

@@ -1,0 +1,218 @@
+<!--index.html realizado por Sergio Julbez para el index de la pagina web-->
+
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+        <script type="application/javascript" src="js/index.js" defer></script>
+
+        <link rel="icon" type="image/x-icon" href="media/sergio/logo.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       
+        <title>nanoPage</title>
+    </head>
+ 
+
+    <body id="body" onload="onLoad()">
+        <header>
+            <nav id="navBar">
+                <img id="logo" src="media/sergio/elNanoLogoFixed2.png" class="clickAnimation" alt="logo">
+
+                <div id="arturo" class="navBarElement clickAnimation" onclick="reDirect(0)">ESCUDERIAS</div>
+                <div id="mario" class="navBarElement clickAnimation" onclick="reDirect(0)">HISTORIA</div>
+                <div id="victor" class="navBarElement clickAnimation" onclick="reDirect(0)">QUIZ</div>
+                <div id="fer" class="navBarElement clickAnimation" onclick="reDirect(0)">ASTON MARTIN</div>
+                <div id="pablo" class="navBarElement clickAnimation" onclick="reDirect(0)">VICTORIAS</div>
+
+                <div id="searchArea">
+                    <input type="text" placeholder="¿Buscas algo?" id="searchBox">
+                    <i onclick="dummy()" class="fa fa-search"></i>
+                </div>
+
+                <div id="userMenu" onclick="sideBar()" class="clickAnimation">
+                    <i class="fa fa-bars" aria-hidden="true" ></i>                  
+                </div>
+            </nav>
+        </header>
+
+        
+        <main class="content"> 
+
+            <nav id="sideBar">              
+                <div class="sideBarContent" onclick="darkMode()"><i class="fa fa-moon-o" aria-hidden="true"></i>  Modo Oscuro</div>
+                <div class="sideBarContent" onclick="dummy()"><i class="fa fa-flag" aria-hidden="true"></i>    Idioma</div>
+                <div class="sideBarContent" onclick="dummy()"><i class="fa fa-bell" aria-hidden="true"></i>    Notificaciones</div>
+                <div class="sideBarContent" onclick="minigame(event, 100000)"><i class="fa fa-gamepad" aria-hidden="true"></i>   Minijuego</div>
+            </nav>
+
+
+
+            <section id="imageSlider">
+                
+                <div class="slide">
+                    <img src="media/sergio/sliderIndexFotos/foto4.jpg" class="imagen" alt="sliderImage">
+                    <div class="fraseSlider">
+                        <p id="texoResto">"Con esto y un bizcocho...<br>Hasta mañana a las ocho"</p>
+                        <p id="quote">Frases que el nano nunca dijo</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="media/sergio/sliderIndexFotos/foto1.png" class="imagen" alt="sliderImage">
+                    <div class="fraseSlider">
+                        <p id="texoResto">"No me pongas en esa situación que ya tengo una edad"</p>
+                        <p id="quote">GP de Sao Paulo</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="media/sergio/sliderIndexFotos/foton.png" class="imagen" alt="sliderImage">
+                    <div class="fraseSlider">
+                        <p id="texoResto">"Sudao"</p>
+                        <p id="quote">Simplemente el nano</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="media/sergio/sliderIndexFotos/foto5.jpg" class="imagen" alt="sliderImage">
+                    <div class="fraseSlider">
+                        <p id="texoResto">"¿Que le dice un pez a otro....?<br>Nada...."</p>
+                        <p id="quote">Frases que el nano nunca dijo</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="media/sergio/sliderIndexFotos/miradaProfunda.jpeg" class="imagen" alt="sliderImage">
+                    <div class="fraseSlider">
+                        <p id="texoResto">"Que rico"</p>
+                        <p id="quote">Todos sabemos lo que está rico</p>
+                    </div>
+                </div>
+                   
+                <a class="prev" onclick="prevSlide()">&#10094;</a>
+                <a class="next" onclick="nextSlide(false)">&#10095;</a>
+
+                <div id="currentSlide">
+                    <div class="currentSlide-line"></div>
+                    <div class="currentSlide-line"></div>
+                    <div class="currentSlide-line"></div>
+                    <div class="currentSlide-line"></div>
+                    <div class="currentSlide-line"></div>
+                </div>
+            </section>
+
+            <section id="fotos">
+                <article class="foto-container">
+                    <img src="media/sergio/memeFA.jpeg" class="imagenes-fotos" alt="sliderImage">
+                    <a class="titulitis" href="https://www.tiktok.com/@fernandoalonso?lang=es" target="_blank">REDES SOCIALES</a>
+                    <p class="titulo">EL NANO EN TIKTOK</p>
+                    <p class="desc">Fernando Alonso es candidato a ser votado como figura de TikTok de este año. ¿A que esperas?<br><br> ¡Vótale para que pueda ganar!</p>
+                </article>
+
+                <article class="foto-container">
+                        <img src="media/sergio/FAfotoParaCards.webp" class="imagenes-fotos" alt="sliderImage">
+                        <a class="titulitis" href="#">CARRERAS</a>
+                        <p class="titulo">UN PODIO MÁS</p>
+                        <p class="desc">Increible duelo entre Checo y Fernando Alonso por el podio en el GP de Sao Paulo, donde Fernando acaba quedando 3º después de un increible adelantamiento. <br><br>¿Quieres verlo? Mira un poco más abajo :&#41;</p>
+                </article>
+
+                <article class="foto-container">
+                        <img src="media/sergio/fototeta.png" class="imagenes-fotos" alt="sliderImage">
+                        <a class="titulitis" href="https://www.astonmartinf1.com/en-GB/" target="_blank">ESCUDERIA</a>
+                        <p class="titulo">NUEVAS MEJORAS PARA EL AMR23</p>
+                        <p class="desc">Aston Martin desarrolla nuevos laterales, DRS y el suelo del AMR23 para poder competir con el Red Bull. <br><br>¿Dejará el AMR23 de ser un tractor?</p>
+                </article>
+
+                <article class="foto-container">
+                    <img src="media/sergio/oconL.jpg" class="imagenes-fotos" alt="sliderImage">
+                    <a class="titulitis" href="#" target="_blank">CONTRINCANTES</a>
+                    <p class="titulo">ESTEBAN OCON EN PRÁCTICAS</p>
+                    <p class="desc">El piloto francés vuelve a las practicas de conducir después de sus últimas incursiones e insultos a los demás pilotos de la parrilla. <br><br>¿Aprenderá a no chocarse?</p>
+                </article>
+            </section>
+
+
+            <section id="scroll-text">
+                <h1>
+                    <span>Citas de un Campeón</span>
+                </h1>
+                <p>
+                    <span>
+                    "Gané carreras, gané títulos, conseguí 'poles', 
+                    tuve grandes sensaciones en estos nuevo años en Fórmula 1. Pero dar este pequeño paso suplementario, conducir un coche de la 'Scuderia', 
+                    era lo que me faltaba para alcanzar la perfección"
+                    </span>
+                </p>
+
+            </section>
+
+
+            <section id="esGodContainer">
+                <article id="vidd">
+                    <h1 id="esGod">" Fernando por fuera"</h1>
+                    <video id="vid" controls  src="media/sergio/sliderIndexFotos/checoVSalonso.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </article>
+            </section>
+
+
+           
+
+            <section id="miniJuego">
+    
+                <div id="controles-minijuego">
+                    <button class="game-button" onclick="startGame()">Start</button>
+                    <span id="stats">Una partidita?</span>
+                </div>
+
+            
+                <div id="core-game">
+
+                <!-- 
+                    -----------------------------DESECHADO-------------------------------- 
+                    <div id="semaforo">
+                        <span class="semaforo-coso"></span>
+                        <span class="semaforo-coso"></span>
+                        <span class="semaforo-coso"></span>
+                    </div>
+                -->
+
+                    <div id="left-tyre">
+                        <button class="rueda" id="arriba-izq" onclick="rueda1()"></button>
+                        <button class="rueda" id="abajo-izq" onclick="rueda2()"></button>
+                    </div>
+                
+                    
+                    <img id="coche" src="media/sergio/cocheMiniJuego.png" alt="coche"">
+                   
+                
+                    <div id="right-tyre">
+                        <button class="rueda" id="arriba-drch" onclick="rueda3()"></button>
+                        <button class="rueda" id="abajo-drch" onclick="rueda4()"></button>
+                    </div>
+                </div>
+            </section>
+        </main> 
+
+
+        <footer id="nanoPageCredits">
+            
+            <div id="nameCredits" class="creditsElement">
+            <p>nanoPage</p>
+            </div>
+
+            <div id="creadorCredits" class="creditsElement">
+                <p>&copy; Sergio Júlbez Méndez</p> 
+            </div>
+
+            <div id="asignaturaCredits" class="creditsElement">
+            <p>Desarrollo Web 2023/24</p>
+            </div>
+
+        </footer>
+    </body>
+</html>
